@@ -82,7 +82,7 @@ SQL files to create the databases if starting from a fresh PostgreSQL can be fou
 
 ## Images of the project
 ### Enrol Program
-![enrolGUI](https://user-images.githubusercontent.com/39916226/112058012-ef664180-8b51-11eb-810e-2ee70f95d585.jpg)
+![enrollGUI](https://user-images.githubusercontent.com/39916226/112059290-93042180-8b53-11eb-9492-aadcd142986f.png)
 
 ### Security Program 
 (For access control at the door)

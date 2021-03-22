@@ -1,4 +1,26 @@
 # Final Year Individual Project - Facial Recognition
+## Features
+This is a complete facial recognition system with four programs:
+
+- Enrol
+- Manage
+- Monitor
+- Security (Access Control)
+
+The system is connected to an SQL database using PostgreSQL and has facial detection and recognition using:
+
+- Face detection is achieved using Haar Cascade Classifiers (OpenCV).
+
+- Face recognition achieved with Local Binary Pattern Histogram (LBPH in OpenCV).
+
+It also uses 7z for making backups and imagemagick for importing photos from different file formats.
+
+The project also includes four implementations of anti-spoofing:
+- High Frequency Descriptor (Fourier Analysis)
+- Fourier Dynamics Descriptor
+- Blink detection 
+- Colour texture analysis (CTA).
+
 ## GitHub public release notes
 Winpython has been removed in this Github public release (was used to make this project as portable as possible, it came with the included libraries pre-installed to make marking easier)
 

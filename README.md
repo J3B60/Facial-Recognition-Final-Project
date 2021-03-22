@@ -86,6 +86,7 @@ SQL files to create the databases if starting from a fresh PostgreSQL can be fou
 
 ### Security Program 
 (For access control at the door)
+
 ![IdlesecurityGUI](https://user-images.githubusercontent.com/39916226/112057864-be860c80-8b51-11eb-8517-e3a5652af582.png)
 
 ### Manage Program

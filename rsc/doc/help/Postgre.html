@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Postgre</h1>
+<p>This document explains the default database setup of the PostgreSQL Server used with the Facial Recognition System. Each table has a "Default Usage" section which is shows the column names and the datatypes for reference when manipulating the tables from the Manage GUI.</p>
+
+<h2>Contents</h2>
+<ul>
+	<li><a href="#Access">1.Access</a></li>
+	<li><a href="#Building">2.Building</a></li>
+	<li><a href="#Camera">3.Camera</a></li>
+	<li><a href="#Department">4.Department</a></li>
+	<li><a href="#Room">5.Room</a></li>
+	<li><a href="#UserCredentials">6.User Credentials</a></li>
+	<li><a href="#UserFace">7.User Face</a></li>
+</ul>
+
+<hr>
+<h2><span id="Access">1.Access</span></h2>
+<hr>
+<p>This table contains the pairings of the Users and the Rooms. A user (referenced by UserID) is given access to a room (referenced by RoomID). The default example is (UserID:10000 and RoomID:100), this allows the User with the ID "10000" access to the Room with the ID "100"</p>
+<h4>Default Usage:</h4>
+<p>("UserID","RoomID")</p>
+<p>(Integer,Integer)</p>
+<br>
+<hr>
+
+<h2><span id="Building">2.Building</span></h2>
+<hr>
+<p>This table contains the buildings of the company. Each building has an ID, a Name and some information. A building can have multiple departments.</p>
+<h4>Default Usage:</h4>
+<p>("BuildingID","BuildingName","BuildingInfo")</p>
+<p>(Integer,VarChar,VarChar)</p>
+<br>
+<hr>
+
+<h2><span id="Camera">3.Camera</span></h2>
+<hr>
+<p>This table contains a list of cameras used for the Facial Recognition System. Each camera has an ID, a Name, a room ID which relates to the room the camera is securing. The camera also has an IP Address which is how the system connects to cameras on the network and there is some Camera Information.</p>
+<h4>Default Usage:</h4>
+<p>("RoomID","CameraName","CameraIPAddress","CameraID","CameraInfo")</p>
+<p>(Integer,VarChar,VarChar,Integer,VarChar)</p>
+<br>
+<hr>
+
+<h2><span id="Department">4.Department</span></h2>
+<hr>
+<p>This table contains the company's departments. Each department has an ID, a Name, department information and each department has a building ID which relates to a building. A department is within a building. A department can have many rooms.</p>
+<h4>Default Usage:</h4>
+<p>("DepartmentID","BuildingID","DepartmentName","DepartmentInfo")</p>
+<p>(Integer,Integer,VarChar,VarChar)</p>
+<br>
+<hr>
+
+<h2><span id="Room">5.Room</span></h2>
+<hr>
+<p>This table contains the company's rooms. Each Room has an ID, a Name, room information and a department ID which relates to a department. A room will be located within a department.</p>
+<h4>Default Usage:</h4>
+<p>("RoomID","DepartmentID","RoomNumber","RoomInfo")</p>
+<p>(Integer,Integer,VarChar,VarChar)</p>
+<br>
+<hr>
+
+<h2><span id="UserCredentials">6.User Credentials</span></h2>
+<hr>
+<p>This table contains the user credentials for access to this Facial Recognition System's collection of programs. Each user has an ID, username (which is used for logging into the system), a password (which is hashed, this hashed password is verified against the user input password), user access level which determins which programs the user has access to (5=Master[Admin], 4=Manage, 3=Monitor, 2=Enrol, 1=Security, 0=No Access). A user from a higher level can access lower level programs aswell. Each user also has a user information section.</p>
+<h4>Default Usage:</h4>
+<p>("UserID","UserAccessLevel","Password","UserName","UserInfo")</p>
+<p>(Integer,Integer,VarChar,VarChar)</p>
+<br>
+<hr>
+
+<h2><span id="UserFace">7.User Face</span></h2>
+<hr>
+<p>This table contains users enrolled into the Facial Recognition System. Each user has a ID, first name and last name. Note that the actual parings between users and Room doors occur in the 'Access' table.</p>
+<h4>Default Usage:</h4>
+<p>("UserID","UserName","UserSurname")</p>
+<p>(Integer,VarChar,VarChar)</p>
+<br>
+<hr>
+
+<footer><a href="./Manage.html">Manage</a><br><a href="./Monitor.html">Monitor</a><br><a href="./Enrol.html">Enrol</a><br><a href="./Security.html">Security</a><br><a href="https://www.postgresql.org/docs/">PostgreSQL</a><br><a href="https://www.pgadmin.org/docs/pgadmin4/development/index.html">pgAdmin 4</a><p>By Milan Lacmanovic - University of Reading</p></footer>
+
+<p> </p>
+
+</body>
+</html>

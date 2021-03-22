@@ -1,0 +1,1 @@
+INSERT INTO public.userface("UserID", "UserName", "UserSurname") VALUES (?, ?, ?);

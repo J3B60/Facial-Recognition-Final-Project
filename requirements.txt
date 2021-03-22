@@ -1,0 +1,9 @@
+PyQt5==5.13.0
+psycopg2==2.8.4
+opencv-python==4.1.1.26
+opencv-contrib-python==4.1.2.30
+numpy==1.17.2
+Pillow==6.2.0
+passlib==1.7.2
+spyder==3.3.6
+scikit-image=0.15.0

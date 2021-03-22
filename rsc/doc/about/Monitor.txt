@@ -1,0 +1,10 @@
+--About--
+Monitor GUI
+
+Facial Recognition System Monitor Interface. 
+
+Ver 1.0
+
+By Milan Lacmanoivc
+
+University of Reading

@@ -1,0 +1,1 @@
+INSERT INTO public.room("RoomID", "DepartmentID", "RoomNumber", "RoomInfo") VALUES (?, ?, ?, ?);

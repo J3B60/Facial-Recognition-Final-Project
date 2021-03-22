@@ -1,0 +1,1 @@
+INSERT INTO public.access("UserID", "RoomID") VALUES (?, ?);

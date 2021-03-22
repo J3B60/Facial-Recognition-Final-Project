@@ -1,0 +1,2 @@
+Camera: test2 LOG
+This is to test the AddCameraFunctionTEST2

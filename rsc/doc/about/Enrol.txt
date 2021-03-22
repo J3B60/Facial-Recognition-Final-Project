@@ -1,0 +1,10 @@
+--About--
+Enrol GUI
+
+Facial Recognition System Enrolment Interface. 
+
+Ver 1.0
+
+By Milan Lacmanoivc
+
+University of Reading

@@ -1,0 +1,1 @@
+INSERT INTO public.building("BuildingID", "BuildingName", "BuildingInfo") VALUES (5, 'OpenSQLTest', 'This is a test for OpenSQL in Manage GUI');

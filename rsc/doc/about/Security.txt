@@ -1,0 +1,10 @@
+--About--
+Security GUI
+
+Facial Recognition System Security Interface. 
+
+Ver 1.0
+
+By Milan Lacmanoivc
+
+University of Reading

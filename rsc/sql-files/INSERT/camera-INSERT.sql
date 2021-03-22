@@ -1,0 +1,1 @@
+INSERT INTO public.camera("RoomID", "CameraName", "CameraIPAddress", "CameraID", "CameraInfo") VALUES (?, ?, ?, ?, ?);

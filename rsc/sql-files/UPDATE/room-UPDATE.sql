@@ -1,0 +1,1 @@
+UPDATE public.room SET "RoomID"=?, "DepartmentID"=?, "RoomNumber"=?, "RoomInfo"=? WHERE <condition>;

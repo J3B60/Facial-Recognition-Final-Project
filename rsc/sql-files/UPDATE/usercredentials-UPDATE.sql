@@ -1,0 +1,1 @@
+UPDATE public.usercredentials SET "UserID"=?, "UserAccessLevel"=?, "Password"=?, "UserName"=?, "UserInfo"=? WHERE <condition>;

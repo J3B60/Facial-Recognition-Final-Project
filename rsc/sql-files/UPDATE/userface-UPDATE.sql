@@ -1,0 +1,1 @@
+UPDATE public.userface SET "UserID"=?, "UserName"=?, "UserSurname"=? WHERE <condition>;

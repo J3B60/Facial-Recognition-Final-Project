@@ -1,0 +1,3 @@
+[2020-2-16 22:17:12] Postgre Server RUNNING
+[2020-2-16 22:17:17] Postgre Connection SUCCESSFUL
+[2020-2-16 22:17:17] Login SUCCESSFUL

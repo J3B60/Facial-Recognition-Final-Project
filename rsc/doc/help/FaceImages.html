@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Face Images</h1>
+<p>This document explains the basic usage of the Face Images Folder of the Facial Recognition System. Each user has their own folder named the User's ID number. Images are usually numbered and in PNG format.(though face recognition trainning also accepts jpg, most of the program only works with png not that it's a limitation but it's just easier since some old code only took png into account and it would take time adding jpg everywhere). The default format is PNG because it compresses the image without lossing any of the original information (lossless) unlike jpg which is lossy. This is because artefacts from lossy compression may affect the face recognition trainning.</p>
+
+<p>The location of the folder is 'rsc > Face Images' relative to the face recognition systems folder path on the machine.</p>
+
+<h2>Contents</h2>
+<ul>
+	<li><a href="#TakePhoto">1.Take Photo</a></li>
+	<li><a href="#ImportImage">2.Import Image</a></li>
+	<li><a href="#DeleteImage">3.Delete Image</a></li>
+	<li><a href="#DeleteUser">4.Delete User</a></li>
+</ul>
+
+<hr>
+<h2><span id="TakePhoto">1.Take Photo</span></h2>
+<hr>
+<p>Takes new photos of the User and adds to their Face Image Folder</p>
+<h4>Basic Usage:</h4>
+<p>Select User by UserID</p>
+<p>Input Number of Images to be taken</p>
+<p>Note* make sure the current machine has a webcam</p>
+<p>Note* you can do this task by hand in the 'Face Images' folder under 'rsc' and just take photos using any camera, number them(optional but preferred) and copy-paste to the relevent User's folder using file explorer.</p>
+<br>
+<hr>
+
+<h2><span id="ImportImage">2.Import Image</span></h2>
+<hr>
+<p>Allows the Admin to import images from elsewhere on the machine. Selected images will be copied and converted (using ImageMagick®) to png. Please note the quality of images, try to avoid lossy compression images or bad quality lossless images where possible.</p>
+<h4>Basic Usage:</h4>
+<p>Select UserID</p>
+<p>Select Images</p>
+<p>Note* you can also do this task by hand in the 'Face Images' folder under 'rsc' and just copy and paste the images to the relevant User using file explorer. It is up to you whether to convert them but please note that the face recognition trainner only works with jpg and png files and the majoirty of the program only works with png files.</p>
+<br>
+<hr>
+
+<h2><span id="DeleteImage">3.Delete Image</span></h2>
+<hr>
+<p>Opens a 'Delete Image' Dialog that allows the Admin to select and delete images from a list. An image preview is show on the top right.</p>
+<h4>Basic Usage:</h4>
+<p>Select Image and press the Discard button</p>
+<p>Note* this can be done by hand in the 'Face Images' folder under 'rsc' using file explorer.</p>
+<br>
+<hr>
+
+<h2><span id="DeleteUser">4.Delete User</span></h2>
+<hr>
+<p>Allows the Admin to select a User and delete all their Images and their User Folder in Face Images. This is useful incase the Admin would like to update the User's Face Images from scratch by deleting them all and adding new ones. There is also an option to delete all Users that are not in the Postgre database, these could be old Users that have enrolled but have left the company.</p>
+<h4>Basic Usage:</h4>
+<p>Select a User or Select 'All Users not in Database'</p>
+<p>Note* This can be done by hand in the 'Face Images' folder under 'rsc' using File explorer and deleting User folders.</p>
+<p>Note* the DELETE option in the Manage GUI under Edit>Database only deletes the enrolled User from the PostgresSQL database. Images for that User is dealt with using this option. This is incase the images need to be saved/used later so it's not done automatically.</p>
+<br>
+<hr>
+
+<footer><a href="./Manage.html">Manage</a><br><a href="./Monitor.html">Monitor</a><br><a href="./Enrol.html">Enrol</a><br><a href="./Security.html">Security</a><br><a href="https://www.postgresql.org/docs/">PostgreSQL</a><br><a href="https://www.pgadmin.org/docs/pgadmin4/development/index.html">pgAdmin 4</a><p>By Milan Lacmanovic - University of Reading</p></footer>
+
+<p> </p>
+
+</body>
+</html>

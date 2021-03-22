@@ -1,0 +1,4 @@
+[2020-5-8 22:6:11] Postgre Server RUNNING
+[2020-5-8 22:6:40] Postgre Connection SUCCESSFUL
+[2020-5-8 22:6:40] Login SUCCESSFUL
+[2020-5-8 22:7:29] Execute SQL statement SUCCESSFUL: INSERT INTO public.building("BuildingID", "BuildingName", "BuildingInfo") VALUES (5, 'OpenSQLTest', 'This is a test for OpenSQL in Manage GUI');

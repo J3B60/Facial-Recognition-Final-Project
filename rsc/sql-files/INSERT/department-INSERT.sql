@@ -1,0 +1,1 @@
+INSERT INTO public.department("DepartmentID", "BuildingID", "DepartmentName", "DepartmentInfo") VALUES (?, ?, ?, ?);

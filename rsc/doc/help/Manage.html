@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Manage GUI</h1>
+
+<p>The Manage Program brings together SQL, File Explorer and other functionality into a single program for easier managment of the facial recognition system. This program is password protected requirering the user to have Access Level 4.</p>
+
+<p>The main text window (text browser) operates as a console of sorts that outputs the results of executing certain tasks.</p>
+
+<p>Note: Nothing is typed into the main text window. It only serves as an output. Functions are performed using the top menu bar.</p>
+<p>The top menu bar has a number of different operations it can perform on the system.</p>
+
+
+<h2> Contents</h2>
+<ul>
+	<li><a href="#File">1. File</a></li>
+	<ul>
+		<li><a href="#SaveAs">1.1 Save As...</a></li>
+		<li><a href="#RunFile">1.2 Run > .sqlFile</a></li>
+		<li><a href="#Export">1.3 Export</a></li>
+		<li><a href="#Backup">1.4 Backup</a></li>
+		<li><a href="#Exit">1.3 Exit</a></li>
+	</ul>
+	<li><a href="#Edit">2. Edit</a></li>
+	<ul>
+		<li><a href="#Database">2.1 Database</a></li>
+		<ul>
+			<li><a href="#INSERT">2.1.1 INSERT</a></li>
+			<li><a href="#DELETE">2.1.1 DELETE</a></li>
+			<li><a href="#UPDATE">2.1.1 UPDATE</a></li>
+		</ul>
+		<li><a href="#Camera">2.2 Camera</a></li>
+		<ul>
+			<li><a href="#TakePhotos">2.2.1 Add</a></li>
+			<li><a href="#ImportImg">2.2.2 Delete</a></li>
+			<li><a href="#DelImg">2.2.3 Delete Image</a></li>
+			<li><a href="#DelUsr">2.2.4 Delete User</a></li>
+		</ul>
+	</ul>
+	<li><a href="#View">3. View</a></li>
+	<ul>
+		<li><a href="#Table">3.1 Table</a></li>
+		<li><a href="#ViewImages">3.2 Images</a></li>
+		<li><a href="#ViewClear">3.2 Clear</a></li>
+	</ul>
+	<li><a href="#Run">4. Run</a></li>
+	<ul>
+		<li><a href="#RecogTrain">4.1 Recognition Training</a></li>
+	</ul>
+	<li><a href="#Settings">5. Settings</a></li>
+	<li><a href="#Tools">6. Tools</a></li>
+	<li><a href="#Help">7. Help</a></li>
+	<ul>
+		<li><a href="#Help2">7.1 Help</a></li>
+		<li><a href="#About">7.2 About</a></li>
+	</ul>
+</ul>
+
+<hr>
+<h2><span id="File">1. File</span></h2>
+<hr>
+<h4><span id="SaveAs">1.1 Save As...</span></h4>
+<p>Save the Text in the main window into a selected location as a file.</p>
+<h4><span id="RunFile">1.2 Run >.sqlFile</span></h4>
+<p>Select an SQL file and execute the SQL statement on the Postgre server.</p>
+<h4><span id="Export">1.3 Export</span></h4>
+<p>The user is presented with a dialog that allows the user to select which table in the database to export. Then a file dialog opens allowing the user to select the location of the exported file. The database table is then exported to a csv file in that requested location.</p>
+<h4><span id="Backup">1.4 Backup</span></h4>
+<p>This option allows the user to backup the Face Images folder. The user is shown a warning message that the operation may take a long time and that the program will become nonoperational until the backup has finished. The resulting backup 7zip file is located in the backups folder of the program, named [DD-MM-YYYY HH-MM-SS]Face Images - Backup.7z. Once the operation is completed the program can continue functioning as normal.</p>
+<h4><span id="Exit">1.5 Exit</span></h4>
+<p>Stop and exit the program.</p>
+<br>
+<hr>
+
+<h2><span id="Edit">2. Edit</span></h2>
+<hr>
+<p>This program can edit both the Postgre databases or the image files associated with the facial recognition system.</p>
+<p>Note, the program only provides convenience and these tasks can all be done manually by either using pgAdmin4/Postgre console or modifying "Face Images" manually.</p>
+<h4><span id="Database">2.1 Database</span></h4>
+<p>More information on the Postgre Databases can be found (<a href="./Postgre.html">here</a>).</p>
+<h3><span id="INSERT">2.1.1 INSERT</span></h3>
+<p>First, opens a dialog that allows the user to select a table to operate on. Then opens a text input dialog allowing the user to input the table records parameters. Once the OK button is clicked then the input is checked to see whether it matches the tables columns. If the match is successful then the entry is added into the database, if not then the INSERT is cancelled.</p>
+<h3><span id="DELETE">2.1.2 DELETE</span></h3>
+<p>First, opens a dialog that allows the user to select a table to operate on. Then opens a text input dialog allowing the user to input an SQL WHERE condition. Once the OK button is clicked and the condition is satisfied, the operation is performed, if not the DELETE is cancelled.</p>
+<h3><span id="UPDATE">2.1.3 UPDATE</span></h3>
+<p>First, opens a dialog that allows the user to select the table to operate on. Then opens a text input dialog allowing the user in input both an SQL SET and WHERE statement. Once the OK button is clicked the WHERE condition is checked and if the SET is valid then the operation is performed on the database, otherwise the UPDATE is cancelled.</p>
+<h4><span id="Images">2.2 Images</span></h4>
+<p>More information on Face Images can be found (<a href="./FaceImages.html">here</a>)</p>
+<h3><span id="TakePhotos">2.2.1 Take Photos</span></h3>
+<p>The user is presented with a dialog asking how many photos they wish to take. Next the user can select which user's folder the new photos will be added to. Then the photos are taken and saved.</p>
+<h3><span id="ImportImg">2.2.2 Import Images</span></h3>
+<p>The user is presented with a warning that the program will be nonoperational until the import process has been completed. The user is then presented with a dialog allowing them to choose which user to import the images for. Upon selecting a user, a file dialog is shown allowing the user to select multiple files, of different file types. The file types support for the import are available in the Image Magick documentation.</p>
+<h3><span id="DelImg">2.2.3 Delete Images</span></h3>
+<p>The user is shown a dialog with an image preview and a list of all face images with their corresponding file path, including user ID. A discard button discards the currently selected image from the Face Images folder.</p>
+<h3><span id="DelUsr">2.2.4 Delete User</span></h3>
+<p>The user is shown a dialog with a list of users. These users correspond to the users in the Face Images folder. The user can select a user from the list and delete their folder from Face Images. This removes all the user's images. Another option is to delete all users in Face Images folder that are not in the Postgres database, this syncs up the folder and database.</p>
+<br>
+<hr>
+
+<h2><span id="View">3. View</span></h2>
+<hr>
+<h4><span id="Table">3.1 Table</span></h4>
+<p>The user is presented with a dialog which allows them to select a database table. When the OK button is clicked, the tables contents is shown in the programs main text window.</p>
+<h4><span id="ViewImages">3.1 Images</span></h4>
+<p>When clicked, the contents of the Face Images folder is printed, this includes the user's ID and the Image name/path.</p>
+<h4><span id="ViewClear">3.1 Clear</span></h4>
+<p>When clicked, the programs main text window is cleared.</p>
+<br>
+<hr>
+
+<h2><span id="Run">4. Run</span></h2>
+<hr>
+<h4><span id="RecogTrain">4.1 Recognition Training</span></h4>
+<p>The program runs the facial recognition training process. This is the same process as the enrol GUI however there are no dialogues, no addition of users just the training and output of the trainner.yml file.</p>
+<br>
+<hr>
+
+<h2><span id="Settings">5. Settings</span></h2>
+<hr>
+<p>N/A for now, settings can be manually edited from the config folder and editing the .ini files using a text editor.</p>
+<br>
+<hr>
+
+<h2><span id="Tools">6. Tools</span></h2>
+<hr>
+<p>Provies quick access to the other gui's of the facial recognition system. (See bottom of page for links to other programs)</p>
+<br>
+<hr>
+
+<h2><span id="Help">7. Help</span></h2>
+<hr>
+<h4><span id="Help2">7.1 Help</span></h4>
+<p>Opens this Manage.html file you are reading</p>
+<h4><span id="About">7.2 About</span></h4>
+<p>Opens the About File corresponding to this GUI.</p>
+<hr>
+
+<footer><a href="./Manage.html">Manage</a><br><a href="./Monitor.html">Monitor</a><br><a href="./Enrol.html">Enrol</a><br><a href="./Security.html">Security</a><br><a href="https://www.postgresql.org/docs/">PostgreSQL</a><br><a href="https://www.pgadmin.org/docs/pgadmin4/development/index.html">pgAdmin 4</a><p>By Milan Lacmanovic - University of Reading</p></footer>
+
+<p> </p>
+
+</body>
+</html>

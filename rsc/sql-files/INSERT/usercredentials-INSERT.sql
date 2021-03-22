@@ -1,0 +1,1 @@
+INSERT INTO public.usercredentials("UserID", "UserAccessLevel", "Password", "UserName", "UserInfo") VALUES (?, ?, ?, ?, ?);

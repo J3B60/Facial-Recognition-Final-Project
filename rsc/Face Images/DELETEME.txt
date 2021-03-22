@@ -1,0 +1,1 @@
+Delete This file, if left it will cause problems, this file is here just to show where the face Images folder is in the gitlab repository. This folder usually contains numbered Folders which correspond to an employee's ID and Numbered images of employees in the folders.

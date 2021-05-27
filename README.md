@@ -90,7 +90,7 @@ Open the _GUI.py programs and run in python.
 
 enrol_GUI.py - Enrol user into system (Creates Employee folder under rsc\FaceImages, adds user to the database, takes photos of the user and retrains the facial recognition system)
 
-manage_GUI.py - Mange every part of the system, from Images, the SQL database, backups and more. See the docs under rsc\doc for everything.
+manage_GUI.py - Mange every part of the system, from Images, the SQL database, backups and more. See the docs or wiki under rsc\doc or [wiki](https://github.com/J3B60/Facial-Recognition-Final-Project/wiki).
 
 monitor_GUI.py - View the camera feeds and the access history.
 
@@ -98,7 +98,7 @@ security_GUI.py - Detects user face, recognises it and checks whether they have 
 
 ## Documentation and other info
 
-Documentation can be found under \rsc\docs and contain an explanation of all the available functions of the system.
+The repository [wiki](https://github.com/J3B60/Facial-Recognition-Final-Project/wiki) has the documentation for the project but the original documentation can still be found in the project repository under \rsc\docs. Documentation contains an explanation of all the available functions of the system.
 
 SQL files to create the databases if starting from a fresh PostgreSQL can be found under rsc\sql-files
 
